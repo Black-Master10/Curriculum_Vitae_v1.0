@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Descarga";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+@using GleamTech.AspNet.Mvc
+@using GleamTech.DocumentUltimate
+@using GleamTech.DocumentUltimate.AspNet
+@using GleamTech.DocumentUltimate.AspNet.UI
+<!DOCTYPE html>
+@{
+    //Ruta Relativa
+    string sCurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+    string sFile = System.IO.Path.Combine(sCurrentDirectory, @"DescargaCV\cv-2023.pdf");
+    string sFilePath = Path.GetFullPath(sFile);
+
+    var documentViewer = new DocumentViewer
+    {
+        Width = 800,
+        Height = 600,
+        Document = sFilePath
+    };
+}
+<html>
+<head>
+    <title>Document Viewer</title>
+    @this.RenderHead(documentViewer)
+</head>
+<body>
+    <table id="tbl_tituto_perfil">
+        <tbody>
+            <tr><td><h2>Descarga el documento</h2></td></tr>
+        </tbody>
+    </table>
+    <br />
+    @this.RenderBody(documentViewer)
+    <br />
+    <table>
+        <tr>
+            <td align="center"><input type="button" value="regresar" id="btnback" class="btn btn-warning" onclick="history.back()"></td>
+        </tr>
+    </table>
+</body>
+</html>

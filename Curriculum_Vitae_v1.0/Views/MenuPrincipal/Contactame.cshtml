@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Contactame";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de contacto</title>
+    <script src="~/Scripts/script.js"></script>
+    <link href="~/Content/estilos.css" rel="stylesheet" />
+
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js"></script>
+</head>
+<body>
+    <p></p>
+    <center><h1>Contáctame.</h1></center>
+    <section class="form_wrap">
+
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user" width="32" height="32"></span>
+            </section>
+            <p></p>
+            <section class="info_items">
+                <p><span class="fa fa-envelope" width="32" height="32"></span> ing.alex.martinez.sanchez@gmail.com</p>
+                <p><span class="fa fa-mobile" width="32" height="32"></span> (52)5624413452</p>
+            </section>
+        </section>
+        <form action="https://formsubmit.co/ing.alex.martinez.sanchez@gmail.com" method="POST" class="form_contact">
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names" name="nombre" required>
+
+                <label for="phone">Telefono / Celular</label>
+                <input type="text" id="phone" name="telefono">
+
+                <label for="email">Correo electrónico *</label>
+                <input type="text" id="email" name="correo" required>
+
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <p></p>
+                <p></p>
+                <table>
+                    <tr>
+                        <td align="center"><input type="button" value="regresar" id="btnback" class="btn btn-warning" onclick="history.back()"></td>
+                        <td align="center"><input type="hidden" name="_next" value="http://www.bautistalopez.com/cvlnet/MenuPrincipal/Contactame"></td>
+                        <td align="center"><input type="hidden" name="_captcha" value="false"></td>
+                        <td align="center"><input type="submit" value="Enviar Mensaje" id="btnSend"></td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>
+

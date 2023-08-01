@@ -1,0 +1,27 @@
+{
+  "CacheSourceKey": "1dp7gzc",
+  "CachePdfKey": "1dp7gzc/1dp7gzc-npq31v.pdf",
+  "CacheXpzKey": "1dp7gzc/1dp7gzc-1qy0mps.xpz",
+  "CacheInfoKey": "1dp7gzc/1dp7gzc-1qy0mps.json",
+  "CacheCopyKey": null,
+  "Document": "Type=FileSystem;File=cv-2023.pdf;Location=\"Type=Physical;Path=D:\\.NET\\Curriculum_Vitae_v1.0\\Curriculum_Vitae_v1.0\\DescargaCV\"",
+  "DocumentFileName": "cv-2023.pdf",
+  "DownloadFileName": null,
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1dp7gzc",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

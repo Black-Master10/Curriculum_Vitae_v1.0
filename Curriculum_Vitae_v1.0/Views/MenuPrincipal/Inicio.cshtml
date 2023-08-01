@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="~/Content/MenuPrincipal.css" rel="stylesheet" />
+<link href="~/Content/sidebar.css" rel="stylesheet" />
+<script src="~/Scripts/reloj.js"></script>
+
+<body onload="startTime()">
+    <div class="area"></div><nav class="main-menu">
+        <br />
+        <br />
+        <ul>
+            <li class="has-subnav" data-toggle="tab">
+                <a href="~/MenuPrincipal/HistorialAcademico">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Historial Académico
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav" data-toggle="tab">
+                <a href="~/MenuPrincipal/HistorialProfesional">
+                    <i class="fa fa-globe fa-2x"></i>
+                    <span class="nav-text">
+                        Historial Profesional
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav" data-toggle="tab">
+                <a href="~/MenuPrincipal/Contactame">
+                    <i class="fa fa-comments fa-2x"></i>
+                    <span class="nav-text">
+                        Contacto
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav" data-toggle="tab">
+                <a href="~/MenuPrincipal/Descarga">
+                    <i class="fa fa-camera-retro fa-2x"></i>
+                    <span class="nav-text">
+                        Descargar Curriculum
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <ul class="logout">
+            <li>
+                <a href="https://www.google.com/">
+                    <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Cerrar
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <table border="1" id="tbl_body">
+        <tbody>
+            <tr>
+                <td>Curriculum Vitae v1.0</td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="tbl_nombre">
+        <tbody>
+            <tr><td>Ing. Gustavo Alexander Martínez Sánchez</td></tr>
+        </tbody>
+    </table>
+    <br />
+    <table id="tbl_hora">
+        <tbody>
+            <tr><td><div>La hora exacta es:</div></td><td><div id="reloj"></div></td></tr>
+        </tbody>
+    </table>
+    <br />
+    <table id="tbl_foto">
+        <tbody>
+            <tr><td><div id="foto">Fotografía</div></td></tr>
+            <tr>
+                <td>
+                    <img src="~/Imagenes/yop-convertida.jpg" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <br />
+    <table id="tbl_tituto_perfil">
+        <tbody>
+            <tr><td><h2>Desarrollador .NET - Full Stack</h2></td></tr>
+        </tbody>
+    </table>
+    <br />
+    <table border="1" id="tbl_perfil">
+        <tr></tr>
+        <tr></tr>
+        <tr><td align="left"><b>Perfil Profesional</b></td></tr>
+        <tr>
+            <td align="justify">
+                <br />
+                Brindar experiencia profesional en el área de desarrollo de software,
+                creando proyectos principalmente en aplicaciones web, de escritorio y api rest, involucrándonos
+                en todas las etapas del ciclo de vida del software e implementándolos en los distintos
+                ambientes como lo son desarrollo, pruebas y producción.
+                También contamos con la experiencia tanto en lado Back-End como Front-End.
+                Manejamos metodología ágil Scrum.
+                Conocimientos solidos en arquitectura MVC y 3 Capas.
+                Experiencia en proyectos con empresas y trabajos Freelances en sitios o remotos.
+                <p></p>
+                Además, se cuenta con experiencia en el área de soporte técnico a usuarios finales.
+                <p>
+                    Mantenimientos preventivos y correctivos, redes, seguimiento de tickets, atención personalizada,
+                    en sitio y remoto.
+
+                </p>
+                <br />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <form method="post">
+        <table border="1" id="tbl_qr">
+            <tr id="tbl_qr">
+                <td id="tbl_qr">
+                    <input type="text" name="txtQRCode" class="form-control" value="@ViewBag.txtQRCode" placeholder="Ingresa la ruta de este sitio para generar QR" />
+                </td>
+                <td id="tbl_qr"><button type="submit">Generar</button></td>
+                <td id="tbl_qr">
+                    @if (ViewBag.imageBytes != null)
+                    {
+                        <img src="@String.Format("data:image/png;base64,{0}",Convert.ToBase64String(ViewBag.imageBytes))" />
+                    }
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br />
+</body>
+

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "HistorialAcademico";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="~/Content/historialacdemico.css" rel="stylesheet" />
+
+<table id="titulo_academico">
+    <tbody>
+        <tr><td><h1>Historial Académico</h1></td></tr>
+    </tbody>
+</table>
+<br />
+<table id="escuelas" class="table">
+    <tbody>
+        <tr><td><b>Escuela</b></td><td><b>Siglas</b></td><td><b>Nivel Educativo</b></td><td><b>Carrera</b></td><td><b>Titulo Obtenido</b></td></tr>
+        <tr><td>Colegio nacional de educación profesional técnica</td><td>CONALEP GAM 1</td><td>Nivel Medio Superior</td><td>Tec.en Informática</td><td>Titulo / Cedula</td></tr>
+        <tr><td>Universidad Abierta y a Distancia de México</td><td>Unadm</td><td>Universidad</td><td>Ing. Desarrolló de Software</td><td>En trámite de titulación</td></tr>
+    </tbody>
+</table>
+<br />
+<table id="iconos_escuelas">
+    <tbody>
+        <tr>
+            <td align="left"><h3>Conalep</h3></td>
+            <td align="right"><h3>Universidad abierta y a distancia de México</h3></td>
+        </tr>
+        <tr>
+            <td>
+                <img src="~/img_png/conalep.png" />
+            </td>
+            <td align="right">
+                <img src="~/img_png/unadm.png" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<table id="escuelas" class="table">
+    <tbody>
+        <tr><td>Puedes verificar los datos en la siguiente liga:</td></tr>
+        <tr><td>Registro Nacional de Profesionistas</td></tr>
+        <tr><td>https://www.cedulaprofesional.sep.gob.mx/cedula/presidencia/indexAvanzada.action</td></tr>
+    </tbody>
+</table>
+<br />
+<table id="escuelas">
+    <tbody>
+        <tr>
+            <td>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label class="btn btn-warning" onclick="history.back()">regresar al menu principal</label>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

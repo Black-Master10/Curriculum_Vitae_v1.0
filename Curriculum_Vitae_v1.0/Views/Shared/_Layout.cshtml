@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="~/Content/responsivo.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-icons.css" rel="stylesheet" />
+    <title>@ViewBag.Title - Curriculum Vitae v1.0</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar" style="background-color: maroon; height:30px"></nav>
+    <div class="container">
+        @RenderBody()
+        <center>
+            <div class="footer">
+                <footer>
+                    <p>Redes Sociales</p>
+
+                    <a href="https://www.linkedin.com/in/alex-martinez10/"><img src="~/img_png/linkedin.svg" width="32" height="32" /></a>
+
+                    <a href="https://github.com/Black-Master10"><img src="~/img_png/github.svg" width="32" height="32" /></a>
+
+                    <p>&copy; @DateTime.Now.Year - Creado por Ing.Gustavo Alexander Martinez Sanchez v1.0</p>
+                </footer>
+            </div>
+        </center>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
